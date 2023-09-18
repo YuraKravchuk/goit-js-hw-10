@@ -18,8 +18,8 @@ function createCatList() {
   fetchBreeds()
     .then(data => {
       renderOptionsList(data);
-      // changeVisibility(refs.loader);
-      // changeVisibility(refs.select);
+      changeVisibility(refs.loader);
+      changeVisibility(refs.select);
     })
     .catch(error => {
       Notify.failure(refs.error.textContent);
@@ -30,7 +30,7 @@ function createCatList() {
 createCatList();
 
 function onSelectChange(evt) {
-  // changeVisibility(refs.loader);
+  changeVisibility(refs.loader);
 
   const selectedBreedId = evt.currentTarget.value;
 
